@@ -1,41 +1,33 @@
 /* File:       conj_grad.c
- * Author:     Vincent Zhang
- *
- * Purpose:    A serial conjugate gradient solver program. Due to time limits,
- *             the MPI parallel version is not included in this source code.
- *
+ 
  * Compile:    gcc -g -Wall -lm -o conj_grad conj_grad.c
  * Run:        conj_grad [order] [tolerance] [iterations] 
  *                       [Optional suppress output(n)] < [file]
- *
- * Input:      A file that contains a symmetric, positive definite matrix A,  
- *             and the corresponding right hand side vector B. Preferably, each
- *             line consists of [n] elements and the [n+1] line would be the b.
- * Output:     1. The number of iterations,
- *             2. The time used by the solver (not including I/O),
- *             3. The solution to the linear system (if not suppressed),
- *             4. The norm of the residual calculated by the conjugate gradient 
- *                method, and 
- *             5. The norm of the residual calculated directly from the 
- *                definition of residual.
- *
- * Algorithm:  The matrix A's initially read and parsed into an one-dimensional
- *             array; the right hand side vector b is stored in an array as 
- *             well. After some preparation work of allocating memory and 
- *             assigning variables the program jumps into the main loop, the 
- *             conjugate gradient solver. For the exact mathematical procedure,
- *             please refer to http://www.cs.usfca.edu/~peter/cs625/prog2.pdf
- *             and http://en.wikipedia.org/wiki/Conjugate_gradient_method for a
- *             much better demonstration.
- *
+ 
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-// #include <mpi.h>     /* For MPI functions, etc */
-#include "timer.h"
+#include <time.h>
+#include <stdint.h>
+
+
+double get_cpu_frequency() {
+    // You need to determine the CPU frequency of your system.
+    // For demonstration purposes, assuming a frequency of 2.4 GHz.
+    // You should replace this value with the actual frequency of your CPU.
+    return 2.4e9; // 2.4 GHz
+}
+
+
+uint64_t rdtsc() {
+    unsigned int lo, hi;
+    __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
+    return ((uint64_t)hi << 32) | lo;
+}
+
 
 
 double dotProduct(double* a, double* b, int size) {
@@ -105,9 +97,9 @@ void assignVector(double* a, double* b, int size) {
 
 
 int main(int argc, char **argv) {
-  int        i, j, k, order, max_iterations, suppress_output;
-  double     start, finish, elapsed;
-  double	 tolerance;
+  int i, j, k, order, max_iterations, suppress_output;
+  //double start, finish, elapsed;
+  double tolerance;
    
   // for (i = 0; i < argc; i++) {
   // 	  printf("##### %d = %s\n", i, argv[i]);
@@ -195,8 +187,22 @@ int main(int argc, char **argv) {
 		  r_prev[i] = rhs[i];
 		  r_prev_prev[i] = rhs[i];
 	  }
+
+	  double** x_values = malloc(max_iterations * sizeof(double*));
+        for (i = 0; i < max_iterations; i++) {
+            x_values[i] = malloc(order * sizeof(double));
+        }
+	  FILE *fp = fopen("C:/Users/DELL/OneDrive/Documents/samplesss/x_values-1000.txt", "w");
+        if (fp == NULL) {
+            fprintf(stderr, "Error opening file for writing\n");
+            exit(1);
+        }
+
 	  
-	  GET_TIME(start);
+	  //clock_t start_time1 = clock();
+      double cpu_freq = get_cpu_frequency();
+
+      uint64_t start_time1 = rdtsc();
 	  
 	  while ((k < max_iterations) && (dotProduct(r, r, order) > tolerance)) {
 	  	  // memcpy(r_prev_prev, r_prev, (order * sizeof(double)));
@@ -241,14 +247,25 @@ int main(int argc, char **argv) {
 		  /* R_k = R_(k-1) - (ALPHA_k * S_k) */
 		  holderVector = scalarVector(holderVector, s, alpha, order);
 		  r = vectorSubtract(r, r_prev, holderVector, order);
+
+
+		  //memcpy(x_values[k-1], x, order * sizeof(double));
+
+		  for (int i = 0; i < order; i++) {
+            fprintf(fp, "%f ", x[i]);
+        }
+        fprintf(fp, "\n");
+		  
 		  
 	  }
 	  
-      GET_TIME(finish);
-      elapsed = finish - start;
+      uint64_t end_time1 = rdtsc();
+      double elapsed_time1 = (double)(end_time1 - start_time1) / cpu_freq;
+	  fclose(fp);
 	  
 	  printf("========= Solver Completed ========= \n");
-	  printf("The code to be timed took %lf seconds\n", elapsed);
+	  printf("Time elapsed: %f seconds\n", elapsed_time1);
+
 	  printf("Number of iterations: %d \n", k);
 	  
 	  if (suppress_output == 0) {
@@ -257,9 +274,11 @@ int main(int argc, char **argv) {
 		  	  printf("%f\n", x[i]);
 		  }	  	
 	  }
+
+
 	  
 	  printf("The norm of the residual calculated by the conjugate gradient method: \n");
-	  double norm = 9999.9999;
+	  double norm = 0;
 	  for (i = 0; i < (order); i++) {
 	  	  norm += r[i]*r[i];
 	  }
@@ -269,13 +288,7 @@ int main(int argc, char **argv) {
 	  /* Calculate the residual with the algorithm
 	  	 R_k = B - (A * X_k) */
 	  r = vectorSubtract(r, rhs, matrixVector(holderVector, matrix, x, order), order);
-	  
-	  
-	  printf("The norm of the residual calculated directly from the definition of residual: \n");
-	  for (i = 0; i < (order * order); i++) {
-	  	  norm += r[i]*r[i];
-	  }
-	  printf("%lf\n", sqrt(norm));
+	
 	  
 
 
@@ -293,6 +306,10 @@ int main(int argc, char **argv) {
 	  free(r_prev);
 	  free(r_prev_prev);
 	  free(holderVector);
+	  for (i = 0; i < max_iterations; i++) {
+            free(x_values[i]);
+        }
+        free(x_values);
   
 	  
   } else {
@@ -305,6 +322,23 @@ int main(int argc, char **argv) {
 
 
 
-
+//OUTPUT WITH TOLERANCE= 0.00001 , ITERATIONS=500
+/*==== No optional command
+========= Solver Completed =========
+Time elapsed: 0.005269 seconds
+Number of iterations: 500
+Solution to the matrix:
+0.342943
+0.685887
+3.230484
+1.056000
+1.001023
+1.015161
+0.975912
+1.017410
+0.990691
+1.006830
+The norm of the residual calculated by the conjugate gradient method:
+10.317036*/
 
 
