@@ -1,0 +1,74 @@
+SPMV NORMAL DOUBLE
+
+Execution time for 1: 0.000126 seconds
+Execution time for 2: 0.001118 seconds
+Execution time for 3: 0.000072 seconds
+Execution time for 4: 0.000287 seconds
+Execution time for 5: 0.002303 seconds
+Execution time for 6: 0.000769 seconds
+Execution time for 7: 0.000006 seconds
+Execution time for 8: 0.001209 seconds
+Execution time for 9: 0.000376 seconds
+Execution time for 10: 0.002753 seconds
+
+
+
+
+
+SPMV NORMAL FLOAT
+
+Execution time for 1            : 0.000103 seconds
+Execution time for 2            : 0.000578 seconds
+Execution time for 3            : 3.7e-05 seconds
+Execution time for 4            : 0.000218 seconds
+Execution time for 5            : 0.002299 seconds
+Execution time for 6            : 0.001779 seconds
+Execution time for 7            : 1.2e-05 seconds
+Execution time for 8            : 0.00139 seconds
+Execution time for 9            : 0.000321 seconds
+Execution time for 10            : 0.002261 seconds
+
+
+
+SPMV 10X FLOAT
+
+Execution time for 1: 0.000007 seconds
+Execution time for 2: 0.000007 seconds
+Execution time for 3: 0.000007 seconds
+Execution time for 4: 0.000006 seconds
+Execution time for 5: 0.000007 seconds
+Execution time for 6: 0.000011 seconds
+Execution time for 7: 0.000011 seconds
+Execution time for 8: 0.000010 seconds
+Execution time for 9: 0.000009 seconds
+Execution time for 10: 0.000008 seconds
+
+
+
+SPMV 10X DOUBLE
+
+Execution time for 1: 0.000012 seconds
+Execution time for 2: 0.000009 seconds
+Execution time for 3: 0.000011 seconds
+Execution time for 4: 0.000011 seconds
+Execution time for 5: 0.000008 seconds
+Execution time for 6: 0.000007 seconds
+Execution time for 7: 0.000007 seconds
+Execution time for 8: 0.000007 seconds
+Execution time for 9: 0.000007 seconds
+Execution time for 10: 0.000007 seconds
+
+
+
+SPMV NORMAL FLOAT OPENMP
+
+Execution time for 1            : 0.0002 seconds
+Execution time for 2            : 0.000863 seconds
+Execution time for 3            : 5.9e-05 seconds
+Execution time for 4            : 0.000206 seconds
+Execution time for 5            : 0.004423 seconds
+Execution time for 6            : 0.001465 seconds
+Execution time for 7            : 1.1e-05 seconds
+Execution time for 8            : 0.002716 seconds
+Execution time for 9            : 0.00073 seconds
+Execution time for 10            : 0.003991 seconds

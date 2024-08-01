@@ -1,0 +1,5439 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 37, Column: 22 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_setzero_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '5'
+  - String:          ':'
+  - Column:          '22'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 41, Column: 23 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_set1_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '9'
+  - String:          ':'
+  - Column:          '23'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 32 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_set1_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '8'
+  - String:          ':'
+  - Column:          '32'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 43, Column: 26 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_add_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '11'
+  - String:          ':'
+  - Column:          '26'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 43, Column: 49 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_mul_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '11'
+  - String:          ':'
+  - Column:          '49'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 48, Column: 9 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          ''''
+  - Callee:          _mm_storeu_pd
+  - String:          ''' inlined into '''
+  - Caller:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost=always)'
+  - String:          ': '
+  - Reason:          always inline attribute
+  - String:          ' at callsite '
+  - String:          csc_matrix_vector_sse
+  - String:          ':'
+  - Line:            '16'
+  - String:          ':'
+  - Column:          '9'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 16 }
+Function:        _vfprintf_l
+Args:
+  - Callee:          __stdio_common_vfprintf
+  - String:          ' will not be inlined into '
+  - Caller:          _vfprintf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 644, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        _vfprintf_l
+Args:
+  - String:          ''''
+  - Callee:          __local_stdio_printf_options
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                       Line: 90, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          _vfprintf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 644, Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          noinline function attribute
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        _vfprintf_l
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 645, Column: 40 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 841, Column: 19 }
+Function:        fprintf
+Args:
+  - String:          ''''
+  - Callee:          _vfprintf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 644, Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          fprintf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 837, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '40'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          fprintf
+  - String:          ':'
+  - Line:            '11'
+  - String:          ':'
+  - Column:          '19'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        fprintf
+Args:
+  - String:          ''''
+  - Callee:          __local_stdio_printf_options
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                       Line: 90, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          fprintf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 837, Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          noinline function attribute
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 841, Column: 55 }
+Function:        fprintf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 840, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        fprintf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 645, Column: 40 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 960, Column: 31 }
+Function:        printf
+Args:
+  - Callee:          __acrt_iob_func
+  - String:          ' will not be inlined into '
+  - Caller:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 960, Column: 19 }
+Function:        printf
+Args:
+  - String:          ''''
+  - Callee:          _vfprintf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 644, Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14960'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          printf
+  - String:          ':'
+  - Line:            '10'
+  - String:          ':'
+  - Column:          '19'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        printf
+Args:
+  - String:          ''''
+  - Callee:          __local_stdio_printf_options
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                       Line: 90, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          noinline function attribute
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 960, Column: 54 }
+Function:        printf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 959, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        printf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 645, Column: 40 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1065, Column: 16 }
+Function:        _vfscanf_l
+Args:
+  - Callee:          __stdio_common_vfscanf
+  - String:          ' will not be inlined into '
+  - Caller:          _vfscanf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1064, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1066, Column: 13 }
+Function:        _vfscanf_l
+Args:
+  - String:          ''''
+  - Callee:          __local_stdio_scanf_options
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                       Line: 100, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          _vfscanf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1064, Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          noinline function attribute
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1066, Column: 13 }
+Function:        _vfscanf_l
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1066, Column: 13 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1210, Column: 19 }
+Function:        fscanf
+Args:
+  - String:          ''''
+  - Callee:          _vfscanf_l
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1064, Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          fscanf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1206, Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14960'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          fscanf
+  - String:          ':'
+  - Line:            '11'
+  - String:          ':'
+  - Column:          '19'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1066, Column: 13 }
+Function:        fscanf
+Args:
+  - String:          ''''
+  - Callee:          __local_stdio_scanf_options
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                       Line: 100, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          fscanf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1206, Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          noinline function attribute
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1210, Column: 54 }
+Function:        fscanf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1209, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1066, Column: 13 }
+Function:        fscanf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1066, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 60 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 60 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            sext
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 44 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 44 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 44 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 27 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, 
+                       Column: 27 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 27 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, 
+                       Column: 27 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 24 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 24 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, 
+                       Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 54, Column: 27 }
+Function:        Value_vector
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 54, 
+                       Column: 27 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 54, Column: 27 }
+Function:        Value_vector
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 54, 
+                       Column: 27 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 36 }
+Function:        Value_vector
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 36 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 36 }
+Function:        Value_vector
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 36 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 69, Column: 17 }
+Function:        main
+Args:
+  - Callee:          __acrt_iob_func
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 70, Column: 9 }
+Function:        main
+Args:
+  - Callee:          exit
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 72, Column: 18 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 73, Column: 13 }
+Function:        main
+Args:
+  - Callee:          exit
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, Column: 9 }
+Function:        main
+Args:
+  - Callee:          mm_read_banner
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 77, Column: 9 }
+Function:        main
+Args:
+  - Callee:          puts
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 78, Column: 9 }
+Function:        main
+Args:
+  - Callee:          exit
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 83, Column: 46 }
+Function:        main
+Args:
+  - Callee:          mm_typecode_to_str
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 84, Column: 9 }
+Function:        main
+Args:
+  - Callee:          exit
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, Column: 21 }
+Function:        main
+Args:
+  - Callee:          mm_read_mtx_crd_size
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 88, Column: 9 }
+Function:        main
+Args:
+  - Callee:          exit
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 16 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 91, Column: 16 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 92, Column: 21 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 93, Column: 28 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 109, Column: 28 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 121, Column: 38 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 122, Column: 39 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, Column: 35 }
+Function:        main
+Args:
+  - Callee:          rand
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 162, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 163, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 164, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 165, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 166, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 167, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 168, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 69, Column: 9 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          fprintf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 837, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 82, Column: 9 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 83, Column: 9 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, Column: 9 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          fscanf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1206, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 139, Column: 27 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '80'
+  - String:          ':'
+  - Column:          '27'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 140, Column: 23 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          get_cpu_frequency
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 8, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '81'
+  - String:          ':'
+  - Column:          '23'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 142, Column: 28 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '83'
+  - String:          ':'
+  - Column:          '28'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 143, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          Value_vector
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 53, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-5'
+  - String:          ', threshold='
+  - Threshold:       '225'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '84'
+  - String:          ':'
+  - Column:          '5'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 145, Column: 26 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '86'
+  - String:          ':'
+  - Column:          '26'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 147, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 149, Column: 28 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '90'
+  - String:          ':'
+  - Column:          '28'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 150, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          csc_matrix_vector_sse
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '60'
+  - String:          ', threshold='
+  - Threshold:       '394'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '91'
+  - String:          ':'
+  - Column:          '5'
+  - String:          ';'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 152, Column: 26 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '93'
+  - String:          ':'
+  - Column:          '26'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 154, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 156, Column: 25 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          rdtsc
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, 
+                       Column: 0 }
+  - String:          ''' inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '337'
+  - String:          ')'
+  - String:          ' at callsite '
+  - String:          main
+  - String:          ':'
+  - Line:            '97'
+  - String:          ':'
+  - Column:          '25'
+  - String:          ';'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 5 }
+Function:        main
+Args:
+  - String:          ''''
+  - Callee:          printf
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 956, Column: 0 }
+  - String:          ''' not inlined into '''
+  - Caller:          main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ''' because it should never be inlined '
+  - String:          '(cost=never)'
+  - String:          ': '
+  - Reason:          varargs
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 131, Column: 23 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 5 }
+Function:        main
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, Column: 26 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, 
+                       Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-delete
+Name:            Invariant
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 5 }
+Function:        main
+Args:
+  - String:          Loop deleted because it is invariant
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 17, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 119, 
+                       Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 26 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, 
+                       Column: 26 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, 
+                       Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 56 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 53 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 50 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 17, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 119, 
+                       Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 26 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, 
+                       Column: 26 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, 
+                       Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 56 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 53 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 50 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, 
+                       Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 119, 
+                       Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 26 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, 
+                       Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 56 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 53 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 50 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 119, 
+                       Column: 22 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 26 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, 
+                       Column: 26 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, 
+                       Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 56 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 53 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 50 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 76, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 97, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, Column: 13 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 98, 
+                       Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, Column: 14 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 87, 
+                       Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 112, 
+                       Column: 22 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 119, 
+                       Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 26 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, 
+                       Column: 26 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 136, 
+                       Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 56 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 53 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 104, 
+                       Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 159, Column: 50 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, 
+                       Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 158, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 841, Column: 55 }
+Function:        fprintf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 840, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        fprintf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 645, Column: 40 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 960, Column: 54 }
+Function:        printf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 959, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 645, Column: 40 }
+Function:        printf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 645, Column: 40 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1210, Column: 54 }
+Function:        fscanf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1209, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1066, Column: 13 }
+Function:        fscanf
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                       Line: 1066, Column: 13 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 29 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 42 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        Value_vector
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 18, Column: 33 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 18, Column: 33 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 29 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 42 }
+Function:        main
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 18, Column: 33 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 26 }
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 5 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, 
+                       Column: 9 }
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 5 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            call
+    DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, 
+                       Column: 35 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 125, Column: 25 }
+Function:        main
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 8, Column: 0 }
+Function:        get_cpu_frequency
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function '''
+  - Function:        get_cpu_frequency
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        get_cpu_frequency
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 8, Column: 0 }
+Function:        get_cpu_frequency
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, Column: 0 }
+Function:        rdtsc
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function '''
+  - Function:        rdtsc
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 17, Column: 5 }
+Function:        rdtsc
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 15, Column: 0 }
+Function:        rdtsc
+Args:
+  - NumInstructions: '5'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 5 }
+Function:        csc_matrix_vector_sse
+Args:
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.500000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, Column: 1 }
+Function:        csc_matrix_vector_sse
+Args:
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.500000e+01'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, Column: 0 }
+Function:        csc_matrix_vector_sse
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function '''
+  - Function:        csc_matrix_vector_sse
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 27 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 24 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 45 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 42 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 5 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '35'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 9 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 9 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 51, Column: 1 }
+Function:        csc_matrix_vector_sse
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 32, Column: 0 }
+Function:        csc_matrix_vector_sse
+Args:
+  - NumInstructions: '97'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 53, Column: 1 }
+Function:        Value_vector
+Args:
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '6.250000e-01'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 53, Column: 0 }
+Function:        Value_vector
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function '''
+  - Function:        Value_vector
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 54, Column: 27 }
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 36 }
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '27'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 57, Column: 1 }
+Function:        Value_vector
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 53, Column: 0 }
+Function:        Value_vector
+Args:
+  - NumInstructions: '47'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.499966e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 113, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.999980e+00'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 113, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '3.999984e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 95, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '5.999976e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, Column: 1 }
+Function:        main
+Args:
+  - NumSpills:       '7'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.999971e+00'
+  - String:          ' total spills cost '
+  - NumReloads:      '7'
+  - String:          ' reloads '
+  - TotalReloadsCost: '6.249975e+00'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '9.999959e-01'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '57'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.230616e+02'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, Column: 0 }
+Function:        main
+Args:
+  - NumStackBytes:   '232'
+  - String:          ' stack bytes in function '''
+  - Function:        main
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '30'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 72, Column: 24 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 72, Column: 18 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 35 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 81, Column: 60 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 90, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '19'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 96, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '15'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 103, Column: 14 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 126, Column: 35 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 130, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 135, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 17, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '27'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 55, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 17, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '19'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 36, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 49, Column: 45 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 22 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 42 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 68, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '35'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 39, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 40, Column: 44 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 113, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '73'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 113, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 114, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 116, Column: 43 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 69, Column: 65 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 77, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 82, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: spmv-10x-double-PARALLEL-SIMD.c, Line: 59, Column: 0 }
+Function:        main
+Args:
+  - NumInstructions: '491'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 830, Column: 1 }
+Function:        fprintf
+Args:
+  - NumVRCopies:     '4'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.000000e+00'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 837, Column: 0 }
+Function:        fprintf
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function '''
+  - Function:        fprintf
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        fprintf
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '28'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 837, Column: 0 }
+Function:        fprintf
+Args:
+  - NumInstructions: '28'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 950, Column: 1 }
+Function:        printf
+Args:
+  - NumVRCopies:     '4'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.000000e+00'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 956, Column: 0 }
+Function:        printf
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function '''
+  - Function:        printf
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        printf
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 956, Column: 0 }
+Function:        printf
+Args:
+  - NumInstructions: '31'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1199, Column: 1 }
+Function:        fscanf
+Args:
+  - NumVRCopies:     '4'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '4.000000e+00'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1206, Column: 0 }
+Function:        fscanf
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function '''
+  - Function:        fscanf
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        fscanf
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '28'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h', 
+                   Line: 1206, Column: 0 }
+Function:        fscanf
+Args:
+  - NumInstructions: '28'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 90, Column: 0 }
+Function:        __local_stdio_printf_options
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function '''
+  - Function:        __local_stdio_printf_options
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 92, Column: 9 }
+Function:        __local_stdio_printf_options
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 90, Column: 0 }
+Function:        __local_stdio_printf_options
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 100, Column: 0 }
+Function:        __local_stdio_scanf_options
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function '''
+  - Function:        __local_stdio_scanf_options
+  - String:          ''''
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 102, Column: 9 }
+Function:        __local_stdio_scanf_options
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_stdio_config.h', 
+                   Line: 100, Column: 0 }
+Function:        __local_stdio_scanf_options
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,152 @@
+target : dependencies
+	actions
+
+SPMV NORMAL
+GCC(
+DOUBLE  = spmv-double.c
+FLOAT   = spmv-float.c
+SSE FLOAT              =spmv-float-sse.c
+AVX INTRINSICS FLOAT   =spmv-float-avx.c
+SSE DOUBLE 			   =spmv-double-sse.c
+AVX INTRINSICS DOUBLE  =spmv-double-avx.c
+AVX WITH ALIGNMENTS FOR 4 DOUBLE 		 =spmv-double-avx-alignmnet4.c
+AVX WITH ALIGNMENTS FOR 4 FLOAT 		 =spmv-float-avx-alignment4.c
+AVX WITH ALIGNMENTS FOR 8 FLOAT 		 =spmv-float-avx-alignment8.c)
+
+ICC(
+DOUBLE
+FLOAT
+SSE
+AVX INTRINSICS
+AVX WITH ALIGNMENTS FOR 4)
+
+
+
+
+
+
+SPMV 10X
+GCC(
+DOUBLE
+FLOAT
+SSE FLOAT 
+AVX INSTRINSICS FLOAT 
+SSE DOUBLE 
+AVX INTRINSICS DOUBLE 
+AVX WITH ALIGNMENTS FOR 4 DOUBLE 
+AVX INTRINSICS FOR 4 FLOAT )
+
+ICC(
+DOUBLE
+FLOAT
+SSE
+AVX INTRINSICS
+AVX WITH ALIGNMENTS FOR 4)
+
+
+
+
+
+
+
+
+
+GC = gcc
+CFLAGS = -std=c99 -O3 -Wall -Wextra
+
+all: SPMV-DOUBLE SPMV-FLOAT SPMV-FLOAT-SSE SPMV-FLOAT-AVX SPMV-DOUBLE-SSE SPMV-DOUBLE-AVX SPMV-FLOAT-AVX-ALIGNMENT4 SPMV-DOUBLE-AVX-ALIGNMENT4 SPMV10X-DOUBLE SPMV10X-FLOAT SPMV10X-DOUBLE-AVX SPMV10X-DOUBLE-SSE
+
+SPMV-DOUBLE: spmv-double.c mmio.c
+	$(GC) $(CFLAGS) -o $@ $^
+SPMV-FLOAT: spmv-float.c mmio.c
+	$(GC) $(CFLAGS) -o $@ $^
+SPMV-FLOAT-SSE: spmv-float-sse.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV-FLOAT-SSE spmv-float-sse.c mmio.c
+SPMV-FLOAT-AVX: spmv-float-avx.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV-FLOAT-AVX spmv-float-avx.c mmio.c
+SPMV-DOUBLE-SSE: spmv-double-sse.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV-DOUBLE-SSE spmv-double-sse.c mmio.c
+SPMV-DOUBLE-AVX: smpv-double-avx.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV-DOUBLE-AVX spmv-double-avx.c mmio.c
+SPMV-FLOAT-AVX-ALIGNMENT4: spmv-float-avx-alignment4.c mmio.c #this is when we are converting to float with function spmv-float-avx-alignment4.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o SPMV-FLOAT-AVX-ALIGNMENT4 spmv-float-avx-alignment4.c mmio.c
+SPMV-DOUBLE-AVX-ALIGNMENT4: spmv-double-avx-alignment4.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o SPMV-DOUBLE-AVX-ALIGNMENT4 spmv-double-avx-alignment4.c mmio.c
+HI: hi.c mmio.c #this is when we are converting to float directly while scanning-sligtly better
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o HI hi.c mmio.c
+SPMV-FLOAT-AVX-ALIGNMENT8: spmv-float-avx-alignment8.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o SPMV-FLOAT-AVX-ALIGNMENT8 spmv-float-avx-alignment8.c mmio.c
+
+
+SPMV10X-FLOAT: spmv10x-float.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -o SPMV10X-FLOAT spmv10x-float.c mmio.c
+SPMV10X-DOUBLE: spmv10x-double.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -o SPMV10X-DOUBLE spmv10x-double.c mmio.c
+SPMV10X-DOUBLE-AVX: spmv10x-double-avx.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o SPMV10X-DOUBLE-AVX spmv10x-double-avx.c mmio.c
+SPMV10X-DOUBLE-SSE: spmv10x-double-sse.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV10X-DOUBLE-SSE spmv10x-double-sse.c mmio.c
+SPMV10X-DOUBLE-AVX-ALIGNMENT4: spmv10x-double-avx-alignment4.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -mfma -o SPMV10X-DOUBLE-AVX-ALIGNMENT4 spmv10x-double-avx-alignment4.c mmio.c
+SPMV10X-FLOAT-AVX: spmv10x-float-avx.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV10X-FLOAT-AVX spmv10x-float-avx.c mmio.c
+SPMV-FLOAT-AVX: spmv-float-avx.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV-FLOAT-AVX spmv-float-avx.c mmio.c
+SPMV10X-FLOAT-AVX-ALIGNMENT8: spmv10x-float-avx-alignment8.c mmio.c
+	gcc -std=c99 -O3 -Wall -Wextra -march=native -o SPMV10X-FLOAT-AVX-ALIGNMENT8 spmv10x-float-avx-alignment8.c mmio.c
+
+
+
+
+
+
+#ICC
+ICC-SPMV-DOUBLE: icc-spmv-double.c
+	icx-cl /Qstd=c99 icc-spmv-double.c /Fe:ICC-SPMV-DOUBLE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+ICC-SPMV-FLOAT: icc-spmv-float.c
+	icx-cl /Qstd=c99 icc-spmv-float.c /Fe:ICC-SPMV-FLOAT.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+ICC-SPMV10X-DOUBLE: icc-spmv10x-double
+	icx-cl /Qstd=c99 icc-spmv10x-double.c /Fe:ICC-SPMV10X-DOUBLE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+
+
+
+
+
+
+	icx-cl /Qstd=c99 /O3 /Wall spmv-double.c mmio.c /Fe:ICC-SPMV-DOUBLE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall spmv-float.c mmio.c /Fe:ICC-SPMV-FLOAT.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall spmv10x-double.c mmio.c /Fe:ICC-SPMV10X-DOUBLE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall spmv10x-float.c mmio.c /Fe:ICC-SPMV10X-FLOAT.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxSSE4.2 spmv-float-sse.c mmio.c /Fe:ICC-SPMV-FLOAT-SSE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxSSE4.2 spmv-double-sse.c mmio.c /Fe:ICC-SPMV-DOUBLE-SSE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxSSE4.2 spmv10x-double-sse.c mmio.c /Fe:ICC-SPMV10X-DOUBLE-SSE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxSSE4.2 spmv10x-float-sse.c mmio.c /Fe:ICC-SPMV10X-FLOAT-SSE.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv-double-avx.c mmio.c /Fe:ICC-SPMV-DOUBLE-AVX.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv-float-avx.c mmio.c /Fe:ICC-SPMV-FLOAT-AVX.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv10x-double-avx.c mmio.c /Fe:ICC-SPMV10X-DOUBLE-AVX.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv10x-float-avx.c mmio.c /Fe:ICC-SPMV10X-FLOAT-AVX.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv10x-double-avx-alignment4.c mmio.c /Fe:ICC-SPMV10X-DOUBLE-AVX-ALIGNMENT4.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv-double-avx-alignment4.c mmio.c /Fe:ICC-SPMV-DOUBLE-AVX-ALIGNMENT4.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv10x-float-avx-alignment8.c mmio.c /Fe:ICC-SPMV10X-FLOAT-AVX-ALIGNMENT8.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+	icx-cl /Qstd=c99 /O3 /Wall /QxAVX2 spmv-float-avx-alignment4.c mmio.c /Fe:ICC-SPMV-FLOAT-AVX-ALIGNMENT4.exe /link /LIBPATH:"C:\Program Files (x86)\Intel\oneAPI\compiler\latest\lib"
+
+
+
+clean:
+	rm -f SPMV-DOUBLE SPMV-FLOAT
