@@ -74,6 +74,17 @@ def create_matrix_plot(ax, matrix, title, highlight_pos=None, highlight_row=None
         ax.add_patch(Rectangle(highlight_pos, 1, 1, fill=True, facecolor='lime', edgecolor='lime', linewidth=3, alpha=0.7))
 
 
+
+
+# ... [Keep the create_matrix_plot function as it is] ...
+
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation, PillowWriter
+from matplotlib.patches import Rectangle
+
+# ... [Keep the create_matrix_plot function as it is] ...
+
 dim = 5
 matrix = np.zeros((dim, dim))
 
@@ -98,16 +109,16 @@ def update_title(ax, title):
     ax.axis('off')
     ax.text(0.5, 0.5, title, ha='center', va='center', fontsize=24, fontweight='bold')
 
-traversal_title = "Single Element Access with Column-wise Progression"
+traversal_title = "Column-wise Traversal (Each Column N Times)"
 
 update_title(ax_title, traversal_title)
 
 def update(frame):
-    k = frame // (dim * dim)  # Outermost loop (column)
-    i = (frame // dim) % dim  # Middle loop (row)
-    j = frame % dim           # Innermost loop (element)
+    j = frame // (dim * dim)  # Outermost loop (column)
+    k = (frame // dim) % dim  # Middle loop (N times)
+    i = frame % dim           # Innermost loop (element)
     
-    create_matrix_plot(ax1, matrix, 'Matrix Traversal', (k, dim - i - 1), highlight_row=i, highlight_col=k)
+    create_matrix_plot(ax1, matrix, 'Matrix Traversal', (j, dim - i - 1), highlight_row=i, highlight_col=j)
     
     # Clear previous texts
     ax_iter.clear()
@@ -115,22 +126,20 @@ def update(frame):
     
     # Add new colored text for each variable
     ax_iter.text(0.3, 0.7, f'Outermost (column):', ha='right', va='center', fontsize=20, color='black', fontweight='bold')
-    ax_iter.text(0.35, 0.7, f'{k}', ha='left', va='center', fontsize=20, color=k_color, fontweight='bold')
-    ax_iter.text(0.3, 0.5, f'Middle (row):', ha='right', va='center', fontsize=20, color='black', fontweight='bold')
-    ax_iter.text(0.35, 0.5, f'{i}', ha='left', va='center', fontsize=20, color=i_color, fontweight='bold')
+    ax_iter.text(0.35, 0.7, f'{j}', ha='left', va='center', fontsize=20, color=j_color, fontweight='bold')
+    ax_iter.text(0.3, 0.5, f'Middle (N times):', ha='right', va='center', fontsize=20, color='black', fontweight='bold')
+    ax_iter.text(0.35, 0.5, f'{k}', ha='left', va='center', fontsize=20, color=k_color, fontweight='bold')
     ax_iter.text(0.3, 0.3, f'Innermost (element):', ha='right', va='center', fontsize=20, color='black', fontweight='bold')
-    ax_iter.text(0.35, 0.3, f'{j}', ha='left', va='center', fontsize=20, color=j_color, fontweight='bold')
+    ax_iter.text(0.35, 0.3, f'{i}', ha='left', va='center', fontsize=20, color=i_color, fontweight='bold')
     
     return ax1, ax_iter
-
-
 
 anim = FuncAnimation(fig, update, frames=dim*dim*dim, interval=500, blit=False)
 
 # Save the animation
-writer = PillowWriter(fps=2)  # Reduced fps to slow down the saved animation
+writer = PillowWriter(fps=2)
 try:
-    anim.save("column-wise_traversal.gif", writer=writer)
+    anim.save("column-wise_n_times_traversal.gif", writer=writer)
     print("Animation saved successfully!")
 except Exception as e:
     print(f"An error occurred while saving the animation: {e}")
