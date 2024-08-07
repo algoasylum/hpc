@@ -45,8 +45,8 @@ fig.patch.set_facecolor('#F5F5F5')
 cases = [
     ("1/1: Optimal Access", lambda f: (f//(dim*dim), (f//dim)%dim, f%dim)),
     ("1/N: Row-major Access", lambda f: (f//(dim*dim), f%dim, (f//dim)%dim)),
-    ("N/N: Column-major Access", lambda f: (f%dim, f//(dim*dim), (f//dim)%dim)),
-    ("N/1: Custom Access", lambda f: ((f//dim)%dim, f%dim, f//(dim*dim)))
+    ("N/1: Column-major Access", lambda f: (f%dim, f//(dim*dim), (f//dim)%dim)),
+    ("N/N: Custom Access", lambda f: ((f//dim)%dim, f%dim, f//(dim*dim)))
 ]
 
 counters = [[0, 0] for _ in range(4)]  # [visited, used] for each case
@@ -72,10 +72,10 @@ def update(frame):
             else:
                 counters[idx][0] += dim  # visited N times
 
-            if "1/1" in title or "N/N" in title:
+            if "1/1" in title or "N/1" in title:
                 counters[idx][1] += 1  # used once
-            else:
-                counters[idx][1] += dim  # used N times
+            elif "N/N" in title:
+                counters[idx][1] += dim  # used N times for N/N case
 
         create_matrix_plot(ax, title, highlight_pos=(j, dim - i - 1), 
                            visited=counters[idx][0], used=counters[idx][1])
